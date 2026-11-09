@@ -21,3 +21,18 @@ Feature: SauceDemo checkout
     Then the order confirmation is displayed
     When I return to the home page
     Then the inventory page is displayed
+
+    Scenario: Purchase one product and return home
+      Given I open the SauceDemo login page
+      When I log in with username "standard_user" and password "secret_sauce"
+      And I add each product and verify its button changes to Remove
+        | Product             |
+        | Sauce Labs Backpack |
+      And I open the cart and proceed to checkout
+      And I enter checkout information with first name "jai", last name "weardhan", and zip code "1025"
+      And I continue to the order overview
+      Then every cart item has quantity 1 and a description
+      When I finish the order
+      Then the order confirmation is displayed
+      When I return to the home page
+      Then the inventory page is displayed
