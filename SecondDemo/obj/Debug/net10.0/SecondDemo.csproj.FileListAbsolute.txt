@@ -287,3 +287,4 @@ c:\Playwright Resume 2026 Source\SecondDemo\SecondDemo\bin\Debug\net10.0\Reqnrol
 c:\Playwright Resume 2026 Source\SecondDemo\SecondDemo\bin\Debug\net10.0\Reqnroll.NUnit.ReqnrollPlugin.dll
 c:\Playwright Resume 2026 Source\SecondDemo\SecondDemo\obj\Debug\net10.0\SecondDemo.ProcessFeatureFileInputs.cache
 c:\Playwright Resume 2026 Source\SecondDemo\SecondDemo\obj\Debug\net10.0\NUnit.AssemblyHooks.SecondDemo.cs
+C:\Playwright Resume 2026 Source\SecondDemo\SecondDemo\obj\Debug\net10.0\SecondDemo.sourcelink.json

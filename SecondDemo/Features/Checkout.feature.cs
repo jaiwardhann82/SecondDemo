@@ -106,7 +106,7 @@ namespace SecondDemo.Features
         
         private static global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages InitializeCucumberMessages()
         {
-            return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("Features/Checkout.feature.ndjson", 3);
+            return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("Features/Checkout.feature.ndjson", 4);
         }
         
         [global::NUnit.Framework.TestAttribute()]
@@ -174,6 +174,68 @@ namespace SecondDemo.Features
 #line hidden
 #line 23
     await testRunner.ThenAsync("the inventory page is displayed", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [global::NUnit.Framework.TestAttribute()]
+        [global::NUnit.Framework.DescriptionAttribute("Purchase one product and return home")]
+        public async global::System.Threading.Tasks.Task PurchaseOneProductAndReturnHome()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
+            string pickleIndex = "1";
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Purchase one product and return home", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            string[] tagsOfRule = ((string[])(null));
+            global::Reqnroll.RuleInfo ruleInfo = null;
+#line 25
+    this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                await testRunner.SkipScenarioAsync();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 26
+      await testRunner.GivenAsync("I open the SauceDemo login page", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 27
+      await testRunner.WhenAsync("I log in with username \"standard_user\" and password \"secret_sauce\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+                global::Reqnroll.Table table2 = new global::Reqnroll.Table(new string[] {
+                            "Product"});
+                table2.AddRow(new string[] {
+                            "Sauce Labs Backpack"});
+#line 28
+      await testRunner.AndAsync("I add each product and verify its button changes to Remove", ((string)(null)), table2, "And ");
+#line hidden
+#line 31
+      await testRunner.AndAsync("I open the cart and proceed to checkout", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 32
+      await testRunner.AndAsync("I enter checkout information with first name \"jai\", last name \"weardhan\", and zip" +
+                        " code \"1025\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 33
+      await testRunner.AndAsync("I continue to the order overview", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 34
+      await testRunner.ThenAsync("every cart item has quantity 1 and a description", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 35
+      await testRunner.WhenAsync("I finish the order", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 36
+      await testRunner.ThenAsync("the order confirmation is displayed", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 37
+      await testRunner.WhenAsync("I return to the home page", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 38
+      await testRunner.ThenAsync("the inventory page is displayed", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
